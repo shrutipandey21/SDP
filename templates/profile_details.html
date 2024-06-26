@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+body {
+  background-color: #ffffb3;
+  font-family: sans-serif;
+}
+
+.container {
+  width: 500px;
+  margin: 0 auto;
+  padding: 20px;
+  border: 1px solid black;
+  border-radius: 20px;
+  background-color: #ffcce5;
+}
+
+h1 {
+  text-align: center;
+  margin-bottom: 20px;
+  color:#cc0066;
+}
+
+.profile-image {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  margin: 0 auto;
+  display: block;
+  background-color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.profile-image img {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+}
+
+.profile-info {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.profile-info h2 {
+  margin: 0;
+}
+
+.profile-info p {
+  margin: 5px 0;
+}
+
+.settings-section {
+  margin-bottom: 20px;
+}
+
+.settings-section label {
+  display: block;
+  margin-bottom: 5px;
+}
+
+.settings-section input[type="text"],
+.settings-section input[type="password"],
+.settings-section input[type="email"] {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid black;
+  border-radius: 5px;
+  box-sizing: border-box;
+  background-color: #fff; /* changed to white */
+}
+
+.settings-section input[type="checkbox"] {
+  margin-right: 5px;
+}
+
+button {
+  background-color: #DC143C;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  width: 100%;
+  margin-top: 20px;
+}
+
+button:hover {
+  background-color: #C71585;
+}
+</style>
+</head>
+<body>
+<div class="container">
+  <h1>PROFILE</h1>
+
+  <div class="profile-image">
+    <img src="https://via.placeholder.com/150" alt="Profile Picture">
+  </div>
+
+  <div class="settings-section">
+    <h3>Account</h3>
+    <label for="name">Name</label>
+    <input type="text" id="name" value="">
+
+    <label for="bank-details">Bank Details</label>
+    <input type="text" id="bank-details" value="">
+  </div>
+
+  <div class="settings-section">
+    <h3>Notifications</h3>
+    <label for="wallet">Wallet</label>
+    <input type="checkbox" id="wallet">
+
+    <label for="transaction">Transaction</label>
+    <input type="checkbox" id="transaction">
+  </div>
+
+  <button onclick="window.location.href='{{ url_for('user_home') }}'">Back</button>
+  <button>Delete Account</button>
+</div>
+</body>
+</html>

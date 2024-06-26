@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login - Easy Pay</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles1.css') }}">
+</head>
+<body>
+    <div class="container">
+        <div class="header-image">
+            <img src="{{ url_for('static', filename='pic1.png') }}" alt="Easy Pay">
+        </div>
+        <div class="form-container">
+            <h1>Welcome Back!</h1>
+            <p>Log Into Your Account</p>
+            <form action="/login" method="POST" enctype="multipart/form-data">
+                <label for="phone_no">Phone No.</label>
+                <input type="text" id="phone_no" name="phone_no" required>
+
+                <label for="otp">OTP</label>
+                <input type="text" id="otp" name="otp" required>
+
+                <label for="biometric">Biometric</label>
+                <input type="file" id="biometric" name="biometric" accept="image/*" required>
+
+                <button type="submit">LOGIN</button>
+            </form>
+            <center> <a href="#" onclick="showHelpline()">Contact Bank</a></center>
+
+            <p>Don't Have An Account? <a href="/">SIGN UP</a></p>
+        </div>
+    </div>
+    <script src="{{ url_for('static', filename='script.js') }}"></script>
+    <script>
+      function showHelpline() {
+        window.alert("Helpline Number: 180012345678");
+      }
+    </script>
+</body>
+</html>

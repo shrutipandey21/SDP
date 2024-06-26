@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Easy Pay</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+<body>
+    <div class="container">
+        <div class="header-image">
+            <img src="{{ url_for('static', filename='moneyman.png') }}" alt="Seniors">
+        </div>
+        <div class="form-container">
+            <h1>Easy Pay</h1>
+            <p>Simplified Payment, Tailored for Seniors!</p>
+            <form action="/register" method="POST" enctype="multipart/form-data">
+                <label for="account_no">Account no.</label>
+                <input type="text" id="account_no" name="account_no" required>
+
+                <label for="ifsc_code">IFSC Code</label>
+                <input type="text" id="ifsc_code" name="ifsc_code" required>
+
+                <label for="full_name">Full Name</label>
+                <input type="text" id="full_name" name="full_name" required>
+
+                <label for="pan_no">PAN No.</label>
+                <input type="text" id="pan_no" name="pan_no" required>
+
+                <label for="phone">Phone</label>
+                <input type="text" id="phone" name="phone" required>
+
+                <label for="biometric">Biometric</label>
+                <input type="file" id="biometric" name="biometric" accept="image/*" required>
+
+                <button type="submit">SIGN UP</button>
+            </form>
+            <p>Already Have An Account? <a href="/login">LOG IN</a></p>
+        </div>
+    </div>
+    <script src="{{ url_for('static', filename='script.js') }}"></script>
+</body>
+</html>

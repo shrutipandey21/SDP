@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pay Now</title>
+    <style>
+        body {
+            background-color: #ff944d;
+            font-family: Arial, sans-serif;
+
+        }
+        .container {
+            width: 50%;
+            margin: auto;
+            padding: 20px;
+            background-color: #ffe6f3;
+            border-radius: 20px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        h1 {
+            text-align: center;
+            color:#cc0066;
+        }
+        label {
+            display: block;
+            margin: 10px 0 5px;
+        }
+        input[type="text"], input[type="file"], input[type="number"] {
+            width: 100%;
+            padding: 10px;
+            margin: 5px 0 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+        button {
+            width: 100%;
+            padding: 10px;
+            background-color: #a10000;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: #870000;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Pay Now</h1>
+        <form action="/pay" method="post" enctype="multipart/form-data">
+            <label for="receiver_id">Receiver's ID</label>
+            <input type="text" id="receiver_id" name="receiver_id" required>
+
+            <label for="amount">Amount</label>
+            <input type="number" id="amount" name="amount" required>
+
+            <label for="biometric">Biometric</label>
+            <input type="file" id="biometric" name="biometric" accept="image/*" required>
+
+            <label for="otp">OTP</label>
+            <input type="text" id="otp" name="otp" required>
+
+            <button type="submit">Pay</button>
+        </form>
+    </div>
+</body>
+</html>

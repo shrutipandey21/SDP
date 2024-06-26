@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Transaction History</title>
+    <link href="https://cdn.lineicons.com/4.0/lineicons.css" rel="stylesheet" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ" crossorigin="anonymous">
+    <link rel="stylesheet" href="styles_transaction_history.css">
+</head>
+
+<body>
+    <div class="transaction-history-container">
+        <h1>Helpline</h1>
+        <!--<div class="transaction-list">
+            <div class="transaction-item">
+                <span>Payment 1</span>
+                <span>Amount</span>
+            </div>
+            <div class="transaction-item">
+                <span>Payment 2</span>
+                <span>Amount</span>
+            </div>
+            <div class="transaction-item">
+                <span>Payment 3</span>
+                <span>Amount</span>
+            </div>
+            <div class="transaction-item">
+                <span>Payment 4</span>
+                <span>Amount</span>
+            </div>
+            <div class="transaction-item">
+                <span>Payment 5</span>
+                <span>Amount</span>
+            </div>
+            <div class="transaction-item">
+                <span>Payment 6</span>
+                <span>Amount</span>
+            </div>
+            <div class="transaction-item">
+                <span>Payment 7</span>
+                <span>Amount</span>
+            </div>
+            <div class="transaction-item">
+                <span>Payment 8</span>
+                <span>Amount</span>
+            </div>
+            <div class="transaction-item">
+                <span>Payment 9</span>
+                <span>Amount</span>
+            </div>
+            <div class="transaction-item">
+                <span>Payment 10</span>
+                <span>Amount</span>
+            </div>-->
+        <p>
+            We apologize for any inconvinience caused . Kindly contact our helpline number or your Bank for further assistance .
+            Helpline Number : 180012345678
+        </p>
+        </div>
+        <button class="btn btn-primary back-button" onclick="goBack()">Back</button>
+        <!--<a href="{{ url_for('back') }}">Back</a>-->
+
+    </div>
+
+    <script>
+        function goBack() {
+            window.history.back();
+        }
+    </script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap');
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: #ffffcc;
+    margin: 0;
+    padding: 0;
+}
+
+.transaction-history-container {
+    padding: 20px;
+}
+
+h1 {
+    font-weight: 600;
+    font-size: 60px;
+    text-align: center;
+    color: brown;
+    margin-bottom: 20px;
+}
+p {
+    font-weight: bold;
+    font-size: 40px;
+    text-align: center;
+    color: BLACK;
+    text-align: center;
+}
+
+.transaction-list {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.transaction-item {
+    background-color: #ffff99;
+    padding: 10px;
+    border-radius: 5px;
+    display: flex;
+    justify-content: space-between;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.transaction-item span {
+    font-size: 20px;
+    color: #555;
+}
+
+.back-button {
+    margin-top: 90px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+
+    </style>
+
+</body>
+
+</html>
